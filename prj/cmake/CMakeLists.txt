@@ -110,6 +110,10 @@ if(NOT SIMD_RUNTIME)
 	add_definitions(-DSIMD_RUNTIME_DISABLE)
 endif()
 
+if(NOT SIMD_SHARED)
+	add_definitions(-DSIMD_STATIC)
+endif()
+
 include_directories("${SIMD_ROOT}/src")
 
 if(SIMD_GET_VERSION)
